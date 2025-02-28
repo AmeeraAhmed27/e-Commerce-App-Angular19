@@ -1,1 +1,15 @@
-<p>categories works!</p>
+<section>
+    <h1 class="main-title fw-bold">{{'categories.allCategoties' | translate}}</h1>
+    <div class="container">
+        <div class="row">
+            @for (cat of categories; track cat._id) {
+                <div class="col-md-3 p-3 col-11 mx-auto">
+                    <div class="content text-center product border border-1 rounded-2">
+                        <img class="w-100 h-[300px]" [src]="cat.image" alt="">
+                        <p class="fs-5">{{cat.name}}</p>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>

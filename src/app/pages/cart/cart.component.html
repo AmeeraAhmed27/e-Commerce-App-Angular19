@@ -1,1 +1,31 @@
-<p>cart works!</p>
+@if(cartDetails.totalCartPrice){
+    <section class="w-1/2 mx-auto bg-gray-50 p-4 rounded border shadow">
+        <h1 class="main-title fw-bold">{{'cart.shopCart' | translate}}</h1>
+        <span>{{'cart.totalCartPrice' | translate}} : {{cartDetails.totalCartPrice | currency: 'GBP'}}</span>
+
+        <button (click)="clearItems()" class="disabled:bg-gray-600 bg-green-600 px-6 py-2 rounded border text-white my-1 block hover:bg-green-800 bg-red-600">{{'cart.clearCart' | translate}}</button>
+        @for (prod of cartDetails.products; track prod.product.id) {
+        <div class="grid md:grid-cols-[20%_minmax(0,1fr)] border-b mb-2 ">
+            <div>
+                <img [src]="prod.product.imageCover" class="w-full h-[200px] p-2 object-contain" [alt]="prod.product.title">
+            </div>
+            <div class="flex justify-between items-center">
+                <div>
+                    <h3>{{prod.product.title}}</h3>
+                    <h4>Price : {{prod.price | currency: 'GBP'}}</h4>
+                    <button (click)="removeItem(prod.product.id)"> <i class="fas fa-trash-can text-green-600"></i> {{'cart.remove' | translate}}</button>
+                </div>
+                <div class="flex items-center gap-4">
+                    <button (click)="updateCount(prod.product.id,prod.count+1)" class=" text-green-600 text-3xl"> <i class="fa-regular fa-square-plus "></i> </button>
+                    <span>{{prod.count}}</span>
+                    <button (click)="updateCount(prod.product.id,prod.count-1)" class=" text-green-600 text-3xl"> <i class="fa-regular fa-square-minus "></i> </button>
+                </div>
+            </div>
+        </div>
+        }
+    
+        <button class="btn-main" [routerLink]="['/checkout'   , cartDetails._id]">{{'cart.checkOut' | translate}}</button>
+    </section>
+}@else{
+<h1>Not Found</h1>
+}

@@ -1,1 +1,28 @@
-<p>checkout works!</p>
+<section class="main-sec w-1/2 mx-auto">
+    <h1 class="text-center text-green-600 text-3xl"> {{'checkOut.checkout' | translate}}</h1>
+        <form [formGroup]="checkOutForm" (ngSubmit)="submitForm()">
+            <div class="mb-1">
+                <label for="details" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{{'checkOut.detailes' | translate}}</label>
+            <textarea formControlName="details" id="details"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"></textarea>
+            </div>
+
+            
+            <div class="mb-1">
+                <label for="phone" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{{'checkOut.phone' | translate}}</label>
+            <input formControlName="phone" type="tel" id="phone"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+            </div>
+            
+
+            <div class="mb-1">
+                <label for="city" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{{'checkOut.city' | translate}}</label>
+                <input formControlName="city" type="text" id="city"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+            </div>
+
+           <button [disabled]="checkOutForm.invalid" class="btn-main" type="submit">{{'checkOut.onlinePayment' | translate}}</button>
+           
+        </form>
+        
+</section>

@@ -1,0 +1,71 @@
+{
+    "navbar": {
+        "home": "الرئيسية",
+        "products": "المنتجات",
+        "categories": "الفئات",
+        "brands": "الماركات",
+        "wishlist": "قائمة المفضلات",
+        "login": "تسجيل الدخول",
+        "register": "التسجيل",
+        "signout": "تسجيل الخروج",
+        "lang": "اللغة"
+    },
+    "login": {
+        "loginNow": "تسجيل الدخول الآن",
+        "email": "البريد الإلكتروني",
+        "password": "كلمة المرور",
+        "forgetPassword": "نسيت كلمة المرور",
+        "signIn": "تسجيل الدخول"
+    },
+    "register": {
+        "registerNow": "سجل الآن",
+        "name": "الاسم",
+        "email": "البريد الإلكتروني",
+        "password": "كلمة المرور",
+        "rePassword": "إعادة كلمة المرور",
+        "phone": "الهاتف",
+        "signUp": "إنشاء حساب"
+    },
+    "footer": {
+        "GetTheFreshCartApp": "احصل على تطبيق FreshCart",
+        "sendYouaLink": "سنرسل لك رابطًا، افتحه على هاتفك لتحميل التطبيق",
+        "shareAppLink": "شارك رابط التطبيق",
+        "getDeliveries": "احصل على توصيلات مع FreshCart",
+        "paymentPartners": "شركاء الدفع"
+    },
+    "home": {
+        "popularCategories": "الفئات الشائعة",
+        "popularProducts": "المنتجات الشائعة",
+        "addToCart": "أضف إلى السلة"
+    },
+    "products": {
+        "popularCategories": "الفئات الشائعة",
+        "popularProducts": "المنتجات الشائعة",
+        "addToCart": "أضف إلى السلة"
+    },
+    "categories": {
+        "allCategoties": "جميع الفئات"
+    },
+    "brands": {
+        "allBrands": "جميع الماركات"
+    },
+    "wishlist": {
+        "wishlist": "قائمة المفضلات",
+        "addToCart": "أضف إلى السلة",
+        "remove": "إزالة"
+    },
+    "cart": {
+        "shopCart": "عربة التسوق",
+        "clearCart": "مسح السلة",
+        "totalCartPrice": "إجمالي سعر السلة",
+        "remove": "إزالة",
+        "checkOut": "إتمام الشراء"
+    },
+    "checkOut": {
+        "checkout": "إتمام الشراء",
+        "detailes": "التفاصيل",
+        "phone": "الهاتف",
+        "city": "المدينة",
+        "onlinePayment": "الدفع الإلكتروني"
+    }
+}

@@ -1,1 +1,56 @@
-<p>details works!</p>
+@if(detailsProduct){
+<section class="w-[70%] mx-auto bg-gray-50 p-4 rounded border shadow my-3">
+    <div class="container">
+        <h1 class="main-title">Details Product</h1>
+        <div class="row align-items-center">
+            <div class="col-12 col-md-3 p-2">
+                
+
+                    
+                    <owl-carousel-o [options]="customOptions">
+    
+                        @for (image of detailsProduct.images; track $index) {
+                        <ng-template carouselSlide>
+                            <div>
+                                <img [src]="image" [alt]="">
+                                
+                            </div>
+                        </ng-template>
+                        }
+                
+                
+                    </owl-carousel-o>
+                
+                  
+            </div>
+            <div class="col-12 col-md-9 p-2">
+                <div class="details">
+
+                    <p class="fw-bold my-2">{{detailsProduct?.createdAt |date}}</p>
+                    <h2 class="fs-3 fw-bold">{{detailsProduct?.title}}</h2>
+                    <h2 class="fs-4 fw-bold text-main ">{{detailsProduct?.category?.name}}</h2>
+                    <div class="d-flex justify-content-between small mt-3">
+                        <span>{{detailsProduct?.price}} EGP</span>
+                        
+                           <div>
+                            @for (star of [1,2,3,4,5].slice(0,detailsProduct?.ratingsAverage); track $index) {
+                                <span> <i class="fa-solid fa-star text-yellow-300 "></i></span>
+                                
+                            }
+                            @if (detailsProduct.ratingsAverage %1!=0) {
+                                <span><i class="fa-solid fa-star-half-stroke text-yellow-300"></i></span>
+                            }
+                            <span>{{detailsProduct?.ratingsAverage}}</span>
+                           </div>
+                            
+                        
+                    </div>
+                    <button (click)=" addToCart(detailsProduct._id)" class="w-100 btn-main my-3">add to cart   <i class="fa-solid fa-cart-shopping fa-beat ms-1"></i></button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+}
